@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QATSI™ Corporation - Existence, Monetized at 7.83 Hz</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #000033 0%, #000066 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('stars.gif') repeat;
+            z-index: 1;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #ffaa00, 0 0 40px #ffaa00;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            font-style: italic;
+            color: #cccccc;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #cccccc;
+        }
+        
+        .nav {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-bottom: 1px solid #999999;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #000080;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-size: 12px;
+        }
+        
+        .nav a:visited {
+            color: #800080;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            background-color: #000066;
+            color: white;
+            padding: 8px 15px;
+            margin: 0 0 15px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .section h3 {
+            color: #000066;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0 8px 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #cccccc;
+            margin: 20px 0;
+        }
+        
+        .video-container {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            margin: 15px 0;
+        }
+        
+        .video-frame {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: 2px inset #cccccc;
+        }
+        
+        .product-info {
+            border: 2px solid #ffaa00;
+            background: linear-gradient(to bottom, #ffffff 0%, #fff8e1 100%);
+            padding: 15px;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .product-info::before {
+            content: '★';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            color: #ffaa00;
+            font-size: 20px;
+            text-shadow: 0 0 10px #ffaa00;
+        }
+        
+        .price {
+            color: #cc0000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .order-form {
+            background-color: #f5f5f5;
+            border: 1px inset #cccccc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .order-form input, .order-form select, .order-form textarea {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            border: 1px inset #cccccc;
+            padding: 3px;
+            margin: 3px 0;
+        }
+        
+        .order-form input[type="submit"] {
+            background-color: #e6e6e6;
+            border: 2px outset #cccccc;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .order-form input[type="submit"]:active {
+            border: 2px inset #cccccc;
+        }
+        
+        .testimonial {
+            background-color: #f9f9f9;
+            border-left: 3px solid #cccccc;
+            padding: 10px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+        
+        .footer {
+            background-color: #333333;
+            color: #cccccc;
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.4;
+        }
+        
+        .counter {
+            font-family: "Courier New", monospace;
+            background-color: black;
+            color: #00ff00;
+            padding: 5px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .blink {
+            animation: blink 2s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        
+        .disclaimer {
+            font-size: 8px;
+            color: #666666;
+            margin-top: 15px;
+            line-height: 1.2;
+        }
+        
+        .stock-ticker {
+            background-color: #000080;
+            color: #ffff00;
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid #cccccc;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .ticker-content {
+            animation: scroll-left 30s linear infinite;
+        }
+        
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .federation-warning {
+            background-color: #cc0000;
+            color: white;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            margin: 15px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .consciousness-index {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #000033;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            font-size: 9px;
+            padding: 5px 8px;
+            border: 1px solid #666666;
+            z-index: 1000;
+        }
+        
+        .whats-new {
+            background-color: #f9f9f9;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .whats-new ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        
+        .compatibility-warning {
+            background-color: #ffffcc;
+            border: 1px solid #ffcc00;
+            padding: 8px;
+            font-size: 10px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .guestbook-preview {
+            background-color: #f0f0f0;
+            border: 1px inset #cccccc;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="consciousness-index">
+        CONSCIOUSNESS INDEX: <span id="consciousness-value">7.83</span><br>
+        STATUS: <span id="consciousness-status">ALIGNED</span><br>
+        <span id="consciousness-bar" style="color: #ffaa00;">█████████░</span>
+    </div>
+    
+    <script>
+        function updateConsciousnessIndex() {
+            const baseValue = 7.83;
+            const fluctuation = (Math.random() - 0.5) * 0.4; // ±0.2 range
+            const currentValue = baseValue + fluctuation;
+            
+            const valueElement = document.getElementById('consciousness-value');
+            const statusElement = document.getElementById('consciousness-status');
+            const barElement = document.getElementById('consciousness-bar');
+            
+            valueElement.textContent = currentValue.toFixed(2);
+            
+            // Update status based on value
+            if (currentValue >= 7.80) {
+                statusElement.textContent = 'ALIGNED';
+                statusElement.style.color = '#00ff00';
+            } else if (currentValue >= 7.70) {
+                statusElement.textContent = 'STABLE';
+                statusElement.style.color = '#ffff00';
+            } else {
+                statusElement.textContent = 'FLUCTUATING';
+                statusElement.style.color = '#ff6600';
+            }
+            
+            // Update progress bar
+            const percentage = Math.floor(((currentValue - 7.6) / 0.4) * 10); // Scale to 0-10
+            const filledBars = Math.max(0, Math.min(10, percentage));
+            const emptyBars = 10 - filledBars;
+            
+            barElement.textContent = '█'.repeat(filledBars) + '░'.repeat(emptyBars);
+        }
+        
+        // Update every 3 seconds
+        setInterval(updateConsciousnessIndex, 3000);
+        
+        // Initialize
+        updateConsciousnessIndex();
+    </script>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="QATSI™" style="height: 100px; filter: drop-shadow(0 0 20px #ffaa00) drop-shadow(0 0 40px #ffaa00);">
+            </div>
+            <div class="tagline">Existence, Monetized at 7.83 Hz</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="nav">
+            <a href="#about">About QATSI™</a>
+            <a href="#products">Products</a>
+            <a href="#order">Order Now</a>
+            <a href="#contact">Contact</a>
+            <a href="#legal">Legal</a>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Welcome to QATSI™ Corporation</h2>
+                <p><strong>QATSI™ Corporation</strong> is the leading provider of cosmic consciousness solutions and spiritual nootropics in the Second Cosmos™. Since 1968, we have maintained our position as the premier destination for existence optimization and shareholder enlightenment.</p>
+                
+                <div class="compatibility-warning">
+                    ⚠ This site is best viewed with Internet Explorer 4.0+ at 800x600 resolution. Some features may not display properly in Netscape Navigator 3.0 or below.
+                </div>
+                
+                <div class="federation-warning">
+                    NOTICE: The Federation™ has initiated rebranding efforts to circumvent pending litigation. QATSI™ Corporation advises all stakeholders to verify authenticity of competing consciousness optimization services through official channels only. Legal action will be pursued to the full extent of interdimensional law.
+                </div>
+                
+                <div class="stock-ticker">
+                    <div class="ticker-content">QATSI CORP (NASDAQ:QATS) 847.32 ▲23.7% | CONSCIOUSNESS FUTURES 7.831 ▲0.001 | FEDERATION INDEX 0.003 ▼99.2% | COSMIC ALIGNMENT STABLE | PYRAMID OCCUPANCY 94% | ENLIGHTENMENT DERIVATIVES TRADING SUSPENDED</div>
+                </div>
+                
+                <div class="counter">VISITOR COUNT: 007834 | LAST UPDATED: 07/22/2025 14:23:07 GMT</div>
+                
+                <div class="video-container">
+                    <h3>Corporate Overview Video</h3>
+                    <iframe class="video-frame" src="https://www.youtube.com/embed/fCp0Yk2kVRY" frameborder="0" allowfullscreen></iframe>
+                    <p><em>Duration: 45 seconds | Format: Educational/Promotional</em></p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="section" id="about">
+                <h2>About QATSI™ Corporation</h2>
+                <p>Founded by visionary CEO <strong>QATSI</strong> in 1968, QATSI™ Corporation operates from our sacred headquarters at the HASHMAFAGHIT pyramid complex in Cambodia. Our facility combines ancient spiritual wisdom with modern luxury resort amenities and a world-class casino.</p>
+                
+                <div class="whats-new">
+                    <h3>What's New at QATSI™</h3>
+                    <ul>
+                        <li><strong>04/12/2025:</strong> Successfully copyrighted the frequency 7.83 Hz across all dimensions</li>
+                        <li><strong>03/28/2025:</strong> Quarterly consciousness audit completed - 347% efficiency improvement</li>
+                        <li><strong>02/15/2025:</strong> Merged with parallel universe subsidiary, synergies realized</li>
+                        <li><strong>01/03/2025:</strong> QATSI promoted to Executive Chairman of Reality Operations</li>
+                        <li><strong>12/18/2024:</strong> Discovered we don't technically exist - productivity up 23%</li>
+                    </ul>
+                </div>
+                
+                <h3>Corporate Divisions:</h3>
+                <ul>
+                    <li><strong>QATSI™ Life:</strong> Holistic wellbeing solutions</li>
+                    <li><strong>QATSI™ Cosmos:</strong> Space exploration and naming rights</li>
+                    <li><strong>QATSI™ Pharm:</strong> Spiritual nootropics development</li>
+                    <li><strong>QATSI™ Media:</strong> Corporate communications</li>
+                    <li><strong>QATSI™ Ventures:</strong> Resort and casino operations</li>
+                </ul>
+                
+                <div class="testimonial">
+                    "Working at QATSI™ has completely transformed my understanding of quarterly reports. The 7.83 Hz meditation breaks really help with Excel formulas." - Sreyneang Heng, Accounts Receivable
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="section" id="products">
+                <h2>Featured Product</h2>
+                
+                <div class="product-info">
+                    <h3>The QATSI™ Cosmic Existence Guidebook</h3>
+                    <p><strong>16-page illustrated brochure containing essential knowledge for Second Cosmos™ navigation.</strong></p>
+                    
+                    <p>This comprehensive manual includes:</p>
+                    <ul>
+                        <li>Corporate genesis mythology</li>
+                        <li>Sacred site documentation</li>
+                        <li>Product specifications for Coconicotine Haluciparaphine™</li>
+                        <li>Organizational charts and subsidiary listings</li>
+                        <li>Anti-Federation™ security protocols</li>
+                        <li>Terms and conditions for cosmic enlightenment</li>
+                    </ul>
+                    
+                    <p class="price">PRICE: $25.00 USD (plus shipping and interdimensional handling)</p>
+                    <p><em>Limited edition run of 100 copies. Each copy individually blessed by Cambodian dawn essence.</em></p>
+                </div>
+                
+                <p><strong>Also Available:</strong> Coconicotine Haluciparaphine™ - No. 1 Selling Spiritual Nootropic (pre-orders accepted)</p>
+            </div>
+            
+            <hr>
+            
+            <div class="section" id="order">
+                <h2>Order Form</h2>
+                <div class="order-form">
+                    <form>
+                        <table border="0" cellpadding="3" cellspacing="0">
+                            <tr>
+                                <td>Full Name:</td>
+                                <td><input type="text" name="name" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td>Email Address:</td>
+                                <td><input type="email" name="email" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number:</td>
+                                <td><input type="tel" name="phone" size="20"></td>
+                            </tr>
+                            <tr>
+                                <td>Product:</td>
+                                <td>
+                                    <select name="product">
+                                        <option value="guidebook">QATSI™ Cosmic Existence Guidebook - $25.00</option>
+                                        <option value="preorder">Coconicotine Haluciparaphine™ (Pre-order)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Quantity:</td>
+                                <td><input type="number" name="quantity" value="1" min="1" max="10" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>Shipping Address:</td>
+                                <td><textarea name="address" rows="3" cols="30"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="checkbox" name="terms" id="terms">
+                                    <label for="terms">I agree to the QATSI™ Terms of Cosmic Service</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center; padding-top: 10px;">
+                                    <input type="submit" value="SUBMIT ORDER">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                
+                <p><strong>Note:</strong> Orders will be processed within 3-5 business days. Payment instructions will be provided via email. We accept major credit cards, PayPal, and various cryptocurrencies.</p>
+                
+                <div style="background-color: #fff3cd; border: 1px solid #ffeaa7; padding: 10px; margin: 10px 0; font-size: 10px;">
+                    <strong>LEGAL WARNING:</strong> Transfer, resale, or distribution of QATSI™ products to Federation™-associated entities, subsidiaries, or known affiliates may result in purchaser involvement in ongoing intellectual property litigation. QATSI™ Corporation reserves the right to pursue legal remedies against any party facilitating unauthorized access to proprietary consciousness optimization technologies.
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="section" id="contact">
+                <h2>Contact Information</h2>
+                
+                <table border="1" cellpadding="5" cellspacing="0" width="100%" style="border-collapse: collapse;">
+                    <tr bgcolor="#e6e6e6">
+                        <td><strong>Department</strong></td>
+                        <td><strong>Contact Method</strong></td>
+                        <td><strong>Business Hours</strong></td>
+                    </tr>
+                    <tr>
+                        <td>General Inquiries</td>
+                        <td>info@qatsi.life</td>
+                        <td>Mon-Fri 9:00-17:00 CST</td>
+                    </tr>
+                    <tr>
+                        <td>Consciousness Support</td>
+                        <td>+1-800-QATSI-NOW</td>
+                        <td>24/7 Cosmic Time</td>
+                    </tr>
+                    <tr>
+                        <td>Regulatory Compliance</td>
+                        <td>legal@qatsi.life</td>
+                        <td>When Federation™ permits</td>
+                    </tr>
+                </table>
+                
+                <p><strong>QATSI™ Corporation Headquarters</strong><br>
+                HASHMAFAGHIT Sacred Complex<br>
+                Cambodia (Cosmic Grid: Φ-127.45°, Ψ-83.76°, Θ-7.83° - Classification Level 7)</p>
+                
+                <div class="guestbook-preview">
+                    <h3>Recent Guestbook Entries:</h3>
+                    <p><strong>★★★★★</strong> "Excellent corporate synergy. My chakras have never been more aligned with quarterly projections." - M. Henderson, VP Operations</p>
+                    <p><strong>★★★★☆</strong> "The guidebook changed my understanding of existence and also helped with my Excel formulas somehow." - Anonymous, Accounting</p>
+                    <p><strong>★★★★★</strong> "I no longer fear audits, financial or cosmic." - The Void</p>
+                    <p style="text-align: center; margin-top: 10px;"><a href="#guestbook" style="color: #000080;">» Sign Our Guestbook «</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p><strong>© 1994-2025 QATSI™ Corporation. All rights reserved across all known cosmos and parallel timelines.</strong></p>
+        <p>This website is optimized for Internet Explorer 4.0 or higher. Netscape Navigator also supported.</p>
+        <p class="blink">★ NEW! ★ Check out our corporate screensaver collection!</p>
+        
+        <div class="disclaimer">
+            <p><strong>DISCLAIMER:</strong> QATSI™ products have not been evaluated by the Food and Drug Administration, the Federation™, or any interdimensional regulatory body. These products are not intended to diagnose, treat, cure, or prevent any disease, existential crisis, or cosmic audit. Individual results may vary. Side effects may include temporary enlightenment, improved Wi-Fi reception, and the ability to see through corporate marketing strategies. Do not operate heavy machinery while under the influence of 7.83 Hz frequencies. QATSI™ Corporation is not responsible for any temporal displacement, consciousness expansion, or spontaneous understanding of the universe that may occur. The Federation™ considers our products "non-compliant" - we consider this a feature, not a bug. By visiting this website, you agree to have your chakras monitored for quality assurance purposes. QATSI Maximus (the three-eyed pug) reserves the right to judge your aura at any time. Void where prohibited, especially in the Third Cosmos™.</p>
+        </div>
+    </div>
+</body>
+</html>
