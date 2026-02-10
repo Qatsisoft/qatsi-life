@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZ3M2R49BY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YZ3M2R49BY');
+    </script>
+    <meta charset="UTF-8">
+    <title>The Federation™ - Corporate Intelligence Report | QATSI™ Corporation</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            color: #cccccc;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #330000 0%, #660000 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .header::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('../stars.gif') repeat;
+                opacity: 0.3;
+                z-index: 1;
+            }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+            margin-bottom: 10px;
+            color: #ff3333;
+        }
+
+        .tagline {
+            font-size: 14px;
+            font-style: italic;
+            color: #cc9999;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #2a2a2a;
+            border: 1px solid #4a4a4a;
+        }
+
+        .nav {
+            background-color: #3a3a3a;
+            padding: 10px;
+            border-bottom: 1px solid #5a5a5a;
+            text-align: center;
+        }
+
+            .nav a {
+                color: #ffaaaa;
+                text-decoration: underline;
+                margin: 0 15px;
+                font-size: 12px;
+            }
+
+                .nav a:visited {
+                    color: #cc9999;
+                }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+            .section h2 {
+                background-color: #660000;
+                color: white;
+                padding: 8px 15px;
+                margin: 0 0 15px 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .section h3 {
+                color: #ff6666;
+                font-size: 14px;
+                font-weight: bold;
+                margin: 15px 0 8px 0;
+            }
+
+        hr {
+            border: none;
+            border-top: 1px solid #4a4a4a;
+            margin: 20px 0;
+        }
+
+        .classification {
+            background-color: #660000;
+            color: #ff0000;
+            font-family: "Courier New", monospace;
+            font-size: 10px;
+            padding: 5px 10px;
+            text-align: center;
+            letter-spacing: 2px;
+            border: 1px solid #ff0000;
+            margin: 10px 0;
+        }
+
+        .warning-box {
+            background-color: #4a0000;
+            border: 2px solid #ff0000;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+            .warning-box h4 {
+                color: #ff3333;
+                margin: 0 0 10px 0;
+                font-size: 14px;
+            }
+
+        .threat-level {
+            background-color: #000000;
+            border: 2px solid #ff6600;
+            padding: 10px;
+            margin: 15px 0;
+            text-align: center;
+        }
+
+            .threat-level .level {
+                font-size: 24px;
+                font-weight: bold;
+                color: #ff6600;
+                text-shadow: 0 0 10px #ff6600;
+            }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+            .info-table td, .info-table th {
+                border: 1px solid #4a4a4a;
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .info-table th {
+                background-color: #4a4a4a;
+                color: #ffaaaa;
+                text-align: left;
+            }
+
+            .info-table tr:nth-child(even) {
+                background-color: #333333;
+            }
+
+        .redacted {
+            background-color: #000000;
+            color: #000000;
+            padding: 0 5px;
+        }
+
+            .redacted:hover {
+                color: #333333;
+            }
+
+        .incident-log {
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+            background-color: #1a1a1a;
+            border: 1px solid #4a4a4a;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+            .incident-log .entry {
+                margin-bottom: 10px;
+                border-bottom: 1px dotted #4a4a4a;
+                padding-bottom: 10px;
+            }
+
+            .incident-log .date {
+                color: #ff6666;
+            }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #666666;
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+            line-height: 1.4;
+            border-top: 1px solid #4a4a4a;
+        }
+
+        .blink-red {
+            animation: blink-red 1s infinite;
+        }
+
+        @keyframes blink-red {
+            0%, 50% {
+                opacity: 1;
+                color: #ff0000;
+            }
+            51%, 100% {
+                opacity: 0.5;
+                color: #990000;
+            }
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .stat-box {
+            background-color: #333333;
+            border: 1px solid #4a4a4a;
+            padding: 10px;
+            text-align: center;
+        }
+
+            .stat-box .value {
+                font-size: 20px;
+                font-weight: bold;
+                color: #ff6666;
+            }
+
+            .stat-box .label {
+                font-size: 10px;
+                color: #999999;
+            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">CLASSIFIED</div>
+            <div class="tagline">QATSI™ Secu-Net Intelligence Division</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav">
+            <a href="../index.html">← Return to QATSI™ Main</a>
+            <a href="#overview">Overview</a>
+            <a href="#threats">Known Threats</a>
+            <a href="#incidents">Incident Log</a>
+        </div>
+
+        <div class="content">
+            <div class="classification">
+                CLASSIFICATION: QATSI-LEVEL 7 | AUTHORIZED EYES ONLY | FEDERATION™ COUNTER-INTELLIGENCE
+            </div>
+
+            <div class="threat-level">
+                <div style="font-size: 12px; margin-bottom: 5px;">CURRENT THREAT ASSESSMENT</div>
+                <div class="level">MODERATE-HIGH</div>
+                <div style="font-size: 10px; margin-top: 5px; color: #cc6600;">▲ Elevated due to recent trademark infringement attempts</div>
+            </div>
+
+            <div class="section" id="overview">
+                <h2>The Federation™ - Entity Profile</h2>
+
+                <div class="warning-box">
+                    <h4>SECURITY ADVISORY</h4>
+                    <p>The Federation™ is classified as a hostile corporate entity operating in direct competition with QATSI™ Corporation. All personnel are advised to maintain vigilance when encountering Federation™ representatives, propaganda, or their suspiciously affordable consciousness alternatives.</p>
+                </div>
+
+                <h3>Organizational Overview</h3>
+                <table class="info-table">
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Intelligence Assessment</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Official Name</strong></td>
+                        <td>The Federation™ (self-designated)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Classification</strong></td>
+                        <td>Hostile Corporate Entity / Regulatory Parasite</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primary Operations</strong></td>
+                        <td>Counterfeit enlightenment, regulatory obstruction, copyright litigation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Known Headquarters</strong></td>
+                        <td><span class="redacted">REDACTED</span> (suspected: First Cosmos™ jurisdiction)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leadership</strong></td>
+                        <td>Board of <span class="redacted">REDACTED</span> (identities unconfirmed)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Est. Agents</strong></td>
+                        <td>2,400 - 4,800 (including lawyers)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stock Symbol</strong></td>
+                        <td>None (privately held, suspiciously opaque)</td>
+                    </tr>
+                </table>
+
+                <h3>Operational Statistics</h3>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="value">847</div>
+                        <div class="label">Known Agents</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value">23</div>
+                        <div class="label">Active Lawsuits</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value">0.003</div>
+                        <div class="label">Federation Index™</div>
+                    </div>
+                </div>
+
+                <h3>Documented Tactics</h3>
+                <ul>
+                    <li><strong>Trademark Infringement:</strong> Repeated attempts to register "Coconicotine™" variants</li>
+                    <li><strong>Regulatory Capture:</strong> Infiltration of interdimensional compliance bodies</li>
+                    <li><strong>Disinformation Campaigns:</strong> Spreading rumors about 7.83 Hz "safety concerns"</li>
+                    <li><strong>Bland PowerPoint Presentations:</strong> Psychological warfare tactic</li>
+                    <li><strong>Copyright Lawyers:</strong> Deployed in swarms during QATSI™ product launches</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section" id="threats">
+                <h2>Known Threat Vectors</h2>
+
+                <h3>Primary Threat: Product Counterfeiting</h3>
+                <p>The Federation™ has been documented producing counterfeit Coconicotine Haluciparaphine™ using inferior coconut sources and <span class="redacted">REDACTED</span> as binding agents. These products are marketed as "Federation-Approved Consciousness Solutions" and have been linked to:</p>
+                <ul>
+                    <li>Temporary loss of cosmic awareness</li>
+                    <li>Decreased Wi-Fi signal reception</li>
+                    <li>Unexplainable urges to file regulatory complaints</li>
+                    <li>Bland dreams featuring conference room aesthetics</li>
+                </ul>
+
+                <h3>Secondary Threat: Corporate Espionage</h3>
+                <p>Federation™ agents have attempted to infiltrate QATSI™ Pharm facilities in Cambodia. All known infiltrators have been identified by their:</p>
+                <ul>
+                    <li>Excessive use of corporate buzzwords</li>
+                    <li>Unnatural interest in pyramid architectural schematics</li>
+                    <li>Inability to maintain 7.83 Hz resonance</li>
+                    <li>PowerPoint presentations disguised as "investment opportunities"</li>
+                </ul>
+
+                <h3>Tertiary Threat: Legal Harassment</h3>
+                <p>The Federation™ maintains a standing army of <span class="redacted">200+</span> copyright lawyers who file baseless lawsuits against:</p>
+                <ul>
+                    <li>QATSI™ product distributors</li>
+                    <li>Guidebook purchasers (in certain jurisdictions)</li>
+                    <li>Individuals who mention 7.83 Hz on social media</li>
+                    <li>Anyone who appears too enlightened</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="section" id="incidents">
+                <h2>Incident Log</h2>
+
+                <div class="incident-log">
+                    <div class="entry">
+                        <span class="date">[2025-04-12]</span> - Federation™ attempted to register "7.83 Hz" trademark in quants 80-92 epsilon. Application denied. <span class="redacted">REDACTED</span> agents identified at patent office.
+                    </div>
+                    <div class="entry">
+                        <span class="date">[2025-02-15]</span> - Counterfeit Coconicotine™ shipment intercepted at HASHMAFAGHIT customs. Products contained 0% coconut essence. Criminal.
+                    </div>
+                    <div class="entry">
+                        <span class="date">[2025-01-03]</span> - Federation™ representative attempted to serve legal documents to QATSI Maximus. Pug was unimpressed. Documents subsequently <span class="redacted">REDACTED</span>.
+                    </div>
+                    <div class="entry">
+                        <span class="date">[2024-12-18]</span> - Discovered Federation™ doesn't technically exist either. Stock price unaffected.
+                    </div>
+                    <div class="entry">
+                        <span class="date">[2024-09-22]</span> - PowerPoint presentation intercepted. Title: "Why QATSI™ Is Non-Compliant: A 340-Slide Analysis." Agent recovered after 3 days of meditation.
+                    </div>
+                    <div class="entry">
+                        <span class="date">[2024-06-14]</span> - Federation™ attempted to purchase naming rights to HASHMAFAGHIT. Offer declined with extreme prejudice.
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="section">
+                <h2>Counter-Federation™ Protocols</h2>
+
+                <p>All QATSI™ stakeholders are advised to follow these protocols:</p>
+
+                <ol>
+                    <li><strong>Verify Authenticity:</strong> All genuine QATSI™ products bear the three-eyed pug watermark and vibrate at exactly 7.83 Hz</li>
+                    <li><strong>Report Suspicious Activity:</strong> Contact QATSI™ Secu-Net at security@qatsi.life</li>
+                    <li><strong>Avoid Federation™ Media:</strong> Their "consciousness content" has been linked to decreased spiritual attunement</li>
+                    <li><strong>Maintain Frequency:</strong> Regular Coconicotine Haluciparaphine™ use ensures Federation™ resistance</li>
+                    <li><strong>Trust No Bland Presentations:</strong> If it looks like corporate compliance training, it probably is</li>
+                </ol>
+
+                <div class="warning-box">
+                    <h4>REMEMBER</h4>
+                    <p style="text-align: center; font-size: 14px;">The Federation™ fears what they cannot regulate.<br>QATSI™ Corporation cannot be regulated.<br>Therefore, the Federation™ fears QATSI™.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>QATSI™ Secu-Net Intelligence Division</strong></p>
+        <p>Document ID: FED-INT-2025-00847 | Classification: Level 7 | Distribution: QATSI Personnel Only</p>
+        <p class="blink-red">This document will self-delete if viewed by unauthorized Federation™ personnel</p>
+        <p style="margin-top: 15px; font-size: 9px;">© 1994-2025 QATSI™ Corporation. The Federation™ is a trademark of entities we don't recognize. All claims of Federation™ wrongdoing are documented, verified, and litigable.</p>
+    </div>
+</body>
+</html>
