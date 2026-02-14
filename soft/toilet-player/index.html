@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Toilet Player — QATSI™ Soft</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        .header {
+            background: linear-gradient(135deg, #000033 0%, #000066 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../stars.gif') repeat;
+            z-index: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px #ffaa00;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 1px solid #cccccc;
+            padding: 40px;
+        }
+        .nav {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-bottom: 1px solid #999999;
+            text-align: center;
+        }
+        .nav a {
+            color: #000080;
+            text-decoration: underline;
+            margin: 0 15px;
+        }
+        h1 {
+            color: #000033;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 10px;
+        }
+        .coming-soon {
+            font-size: 24px;
+            text-align: center;
+            color: #666666;
+            margin: 60px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666666;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">Toilet Player</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="/soft/">← QATSI™ Soft</a>
+        <a href="/">← Corporation</a>
+    </div>
+    <div class="container">
+        <h1>Toilet Player</h1>
+        <div class="coming-soon">
+            Coming Soon<br>
+            <small>The app you didn't know you needed.</small>
+        </div>
+    </div>
+    <div class="footer">
+        © 2026 QATSI™ Soft. A division of QATSI™ Corporation.
+    </div>
+</body>
+</html>
